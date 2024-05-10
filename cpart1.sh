@@ -42,22 +42,16 @@ echo -e ' 26660-->36660
 echo -e ' 9090 --> 9190
 echo -e ' 9091 --> 9191
 echo -e ' 1317 --> 1327
-
-
-break
+exit
 ;;
+
 
 "Change 26656-->46656")
 
 
-break
-;;
 
 "Change 26656-->56656")
 
-  
-break
-;;
 
 "Exit")
 exit
