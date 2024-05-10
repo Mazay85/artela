@@ -3,19 +3,6 @@
 while true
 do
 
-# Logo
-
-echo -e '\e[40m\e[91m'
-echo -e '  ____                  _                    '
-echo -e ' / ___|_ __ _   _ _ __ | |_ ___  _ __        '
-echo -e '| |   |  __| | | |  _ \| __/ _ \|  _ \       '
-echo -e '| |___| |  | |_| | |_) | || (_) | | | |      '
-echo -e ' \____|_|   \__  |  __/ \__\___/|_| |_|      '
-echo -e '            |___/|_|                         '
-echo -e '\e[0m'
-
-sleep 2
-
 # Menu
 
 PS3='Select an action: '
@@ -33,7 +20,7 @@ sed -i.bak -e "s%^proxy_app = \"tcp://127.0.0.1:26658\"%proxy_app = \"tcp://127.
 sed -i.bak -e "s%^address = \"localhost:9090\"%address = \"localhost:9190\"%; s%^address = \"localhost:9091\"%address = \"localhost:9191\"%; s%^address = \"tcp://localhost:1317\"%address = \"tcp://localhost:1327\"%" $HOME/.artelad/config/app.toml
 sed -i.bak -e "s%^node = \"tcp://localhost:26657\"%node = \"tcp://localhost:36657\"%" $HOME/.artelad/config/client.toml
 sudo systemctl restart artelad
-
+echo -e '\e[40m\e[91m'
 echo -e ' 26656-->36656 '
 echo -e ' 26657-->36657 '
 echo -e ' 26658-->36658 '
@@ -42,7 +29,7 @@ echo -e ' 26660-->36660 '
 echo -e ' 9090 --> 9190 '
 echo -e ' 9091 --> 9191 '
 echo -e ' 1317 --> 1327 '
-
+echo -e '\e[0m'
 exit
 ;;
 *) echo "invalid option $REPLY";;
@@ -50,17 +37,3 @@ esac
 done
 done
 
-"Change 26656-->46656")
-
-
-
-"Change 26656-->56656")
-
-
-"Exit")
-exit
-;;
-*) echo "invalid option $REPLY";;
-esac
-done
-done
