@@ -34,17 +34,21 @@ sed -i.bak -e "s%^address = \"localhost:9090\"%address = \"localhost:9190\"%; s%
 sed -i.bak -e "s%^node = \"tcp://localhost:26657\"%node = \"tcp://localhost:36657\"%" $HOME/.artelad/config/client.toml
 sudo systemctl restart artelad
 
-echo -e ' 26656-->36656
-echo -e ' 26657-->36657
-echo -e ' 26658-->36658
-echo -e ' 6060 --> 6061
-echo -e ' 26660-->36660
-echo -e ' 9090 --> 9190
-echo -e ' 9091 --> 9191
-echo -e ' 1317 --> 1327
+echo -e ' 26656-->36656 '
+echo -e ' 26657-->36657 '
+echo -e ' 26658-->36658 '
+echo -e ' 6060 --> 6061 '
+echo -e ' 26660-->36660 '
+echo -e ' 9090 --> 9190 '
+echo -e ' 9091 --> 9191 '
+echo -e ' 1317 --> 1327 '
+
 exit
 ;;
-
+*) echo "invalid option $REPLY";;
+esac
+done
+done
 
 "Change 26656-->46656")
 
